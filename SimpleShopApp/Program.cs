@@ -109,7 +109,7 @@ using System.Text;
             {
                 count++;
                 Console.WriteLine($"number: {count}");
-                Console.WriteLine($"name: {(string)product["name"]}");
+                Console.WriteLine($"name: {product["name"]}");
                 Console.WriteLine($"model: {(string)product["model"]}");
                 Console.WriteLine($"price: {(double)product["price"]}");
                 Console.WriteLine($"quantity: {(int)product["quantity"]}");
