@@ -109,10 +109,11 @@ using System.Text;
             {
                 count++;
                 Console.WriteLine($"number: {count}");
+                Console.WriteLine($"id: {product["id"]}");
                 Console.WriteLine($"name: {product["name"]}");
-                Console.WriteLine($"model: {(string)product["model"]}");
-                Console.WriteLine($"price: {(double)product["price"]}");
-                Console.WriteLine($"quantity: {(int)product["quantity"]}");
+                Console.WriteLine($"model: {product["model"]}");
+                Console.WriteLine($"price: {product["price"]}");
+                Console.WriteLine($"quantity: {product["quantity"]}");
                 Console.WriteLine($"category: {getCategory((int)product["product_category_id"])}");
                 Console.WriteLine("==================");
             }
@@ -154,12 +155,12 @@ using System.Text;
         {
             foreach (Hashtable product in products)
             {
-                count++;
-                Console.WriteLine($"id: {(int)product["id"]}");
-                Console.WriteLine($"name: {(string)product["name"]}");
-                Console.WriteLine($"model: {(string)product["model"]}");
-                Console.WriteLine($"price: {(double)product["price"]}");
-                Console.WriteLine($"quantity: {(int)product["quantity"]}");
+              
+                Console.WriteLine($"id: {product["id"]}");
+                Console.WriteLine($"name: {product["name"]}");
+                Console.WriteLine($"model: {product["model"]}");
+                Console.WriteLine($"price: {product["price"]}");
+                Console.WriteLine($"quantity: {product["quantity"]}");
                 Console.WriteLine($"category: {getCategory((int)product["product_category_id"])}");
                 Console.WriteLine("==================");
             }
@@ -209,10 +210,10 @@ using System.Text;
                 {
                     count++;
                     Console.WriteLine($"number: {count}");
-                    Console.WriteLine($"name: {(string)product["name"]}");
-                    Console.WriteLine($"model: {(string)product["model"]}");
-                    Console.WriteLine($"price: {(double)product["price"]}");
-                    Console.WriteLine($"quantity: {(int)product["quantity"]}");
+                    Console.WriteLine($"name: {product["name"]}");
+                    Console.WriteLine($"model: {product["model"]}");
+                    Console.WriteLine($"price: {product["price"]}");
+                    Console.WriteLine($"quantity: {product["quantity"]}");
                     Console.WriteLine($"category: {getCategory((int)product["product_category_id"])}");
                     Console.WriteLine("==================");
                 }
@@ -331,7 +332,7 @@ using System.Text;
             if ((int)product["id"] == idToSell)
             {
                 int currentQuantity = (int)product["quantity"];
-                Console.WriteLine($"Selling product: {(string)product["name"]}");
+                Console.WriteLine($"Selling product: {product["name"]}");
 
                 int quantityToSell;
                 while (true)
