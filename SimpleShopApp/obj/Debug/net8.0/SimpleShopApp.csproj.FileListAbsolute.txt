@@ -1,0 +1,14 @@
+C:\Users\TechEvo Computers\Desktop\SimpleShopApp\SimpleShopApp\bin\Debug\net8.0\SimpleShopApp.exe
+C:\Users\TechEvo Computers\Desktop\SimpleShopApp\SimpleShopApp\bin\Debug\net8.0\SimpleShopApp.deps.json
+C:\Users\TechEvo Computers\Desktop\SimpleShopApp\SimpleShopApp\bin\Debug\net8.0\SimpleShopApp.runtimeconfig.json
+C:\Users\TechEvo Computers\Desktop\SimpleShopApp\SimpleShopApp\bin\Debug\net8.0\SimpleShopApp.dll
+C:\Users\TechEvo Computers\Desktop\SimpleShopApp\SimpleShopApp\bin\Debug\net8.0\SimpleShopApp.pdb
+C:\Users\TechEvo Computers\Desktop\SimpleShopApp\SimpleShopApp\obj\Debug\net8.0\SimpleShopApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\TechEvo Computers\Desktop\SimpleShopApp\SimpleShopApp\obj\Debug\net8.0\SimpleShopApp.AssemblyInfoInputs.cache
+C:\Users\TechEvo Computers\Desktop\SimpleShopApp\SimpleShopApp\obj\Debug\net8.0\SimpleShopApp.AssemblyInfo.cs
+C:\Users\TechEvo Computers\Desktop\SimpleShopApp\SimpleShopApp\obj\Debug\net8.0\SimpleShopApp.csproj.CoreCompileInputs.cache
+C:\Users\TechEvo Computers\Desktop\SimpleShopApp\SimpleShopApp\obj\Debug\net8.0\SimpleShopApp.dll
+C:\Users\TechEvo Computers\Desktop\SimpleShopApp\SimpleShopApp\obj\Debug\net8.0\refint\SimpleShopApp.dll
+C:\Users\TechEvo Computers\Desktop\SimpleShopApp\SimpleShopApp\obj\Debug\net8.0\SimpleShopApp.pdb
+C:\Users\TechEvo Computers\Desktop\SimpleShopApp\SimpleShopApp\obj\Debug\net8.0\SimpleShopApp.genruntimeconfig.cache
+C:\Users\TechEvo Computers\Desktop\SimpleShopApp\SimpleShopApp\obj\Debug\net8.0\ref\SimpleShopApp.dll
