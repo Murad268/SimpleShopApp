@@ -2,9 +2,8 @@
 using System.Collections;
 using System.Text;
 
-class Program
-{
-    static ArrayList productCategories = new ArrayList()
+
+     ArrayList productCategories = new ArrayList()
     {
         new Hashtable()
         {
@@ -18,7 +17,7 @@ class Program
         }
     };
 
-    static ArrayList products = new ArrayList()
+     ArrayList products = new ArrayList()
     {
         new Hashtable()
         {
@@ -94,8 +93,7 @@ class Program
         }
     };
 
-    static void Main()
-    {
+
         Console.OutputEncoding = Encoding.UTF8;
         Console.InputEncoding = Encoding.UTF8;
 
@@ -146,7 +144,7 @@ class Program
                 Console.WriteLine($"{(int)category["id"]}: {(string)category["name"]}");
             }
             int selectedCategory = Convert.ToInt32(Console.ReadLine());
-            getProductsByCategory(selectedCategory, true);
+            getProductsByCategory(selectedCategory, true, getCategory(selectedCategory));
         }
         else if (selectedVariant == 5)
         {
@@ -169,9 +167,8 @@ class Program
         }
 
         goto Start;
-    }
 
-    static string getCategory(int product_category_id)
+     string getCategory(int product_category_id)
     {
         foreach (Hashtable category in productCategories)
         {
@@ -183,7 +180,7 @@ class Program
         return "not found";
     }
 
-    static void getProductsByCategory(int product_category_id, bool getTotal = false)
+     void getProductsByCategory(int product_category_id, bool getTotal = false, string category = null)
     {
         ArrayList willReturnedArray = new ArrayList();
 
@@ -225,11 +222,11 @@ class Program
             {
                 total += (double)product["price"];
             }
-            Console.WriteLine($"Total price for category: {total}");
+            Console.WriteLine($"Total price for {category}: {total}");
         }
     }
 
-    static void addProduct()
+     void addProduct()
     {
         Console.WriteLine("Enter product name:");
         string name;
@@ -305,7 +302,7 @@ class Program
         Console.WriteLine("Product added successfully.");
     }
 
-    static void sellProduct()
+     void sellProduct()
     {
         Console.WriteLine("Enter product id to sell:");
         int idToSell;
@@ -363,4 +360,3 @@ class Program
         Console.WriteLine("Product not found.");
     }
 
-}
