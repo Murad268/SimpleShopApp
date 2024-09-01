@@ -100,10 +100,10 @@ using System.Text;
     Start:
         Console.WriteLine("1: Show all products, 2: Show products by category, 3: Show total company price, 4: Show total price for category, 5: Add product, 6: Sell product");
 
-        int selectedVariant = Convert.ToInt32(Console.ReadLine());
+        var selectedVariant = Console.ReadLine();
         int count = 0;
 
-        if (selectedVariant == 1)
+        if (selectedVariant == "1")
         {
             foreach (Hashtable product in products)
             {
@@ -117,7 +117,7 @@ using System.Text;
                 Console.WriteLine("==================");
             }
         }
-        else if (selectedVariant == 2)
+        else if (selectedVariant == "2")
         {
             Console.WriteLine("Select category id");
             foreach (Hashtable category in productCategories)
@@ -127,7 +127,7 @@ using System.Text;
             int selectedCategory = Convert.ToInt32(Console.ReadLine());
             getProductsByCategory(selectedCategory);
         }
-        else if (selectedVariant == 3)
+        else if (selectedVariant == "3")
         {
             double price = 0;
             foreach (Hashtable product in products)
@@ -136,7 +136,7 @@ using System.Text;
             }
             Console.WriteLine($"Total company price: {price}");
         }
-        else if (selectedVariant == 4)
+        else if (selectedVariant == "4")
         {
             Console.WriteLine("Select category id");
             foreach (Hashtable category in productCategories)
@@ -146,11 +146,11 @@ using System.Text;
             int selectedCategory = Convert.ToInt32(Console.ReadLine());
             getProductsByCategory(selectedCategory, true, getCategory(selectedCategory));
         }
-        else if (selectedVariant == 5)
+        else if (selectedVariant == "5")
         {
             addProduct();
         }
-        else if (selectedVariant == 6)
+        else if (selectedVariant == "6")
         {
             foreach (Hashtable product in products)
             {
@@ -164,7 +164,10 @@ using System.Text;
                 Console.WriteLine("==================");
             }
             sellProduct();
-        }
+        } else
+            {
+                Console.WriteLine("Invalid selected variant");
+            }
 
         goto Start;
 
@@ -257,19 +260,26 @@ using System.Text;
         {
             Console.WriteLine("Enter product price:");
             string inputPrice = Console.ReadLine();
-            if (double.TryParse(inputPrice, out price))
+            int checkPrice;
+            if (double.TryParse(inputPrice, out price) && price >= 0)
             {
+               
                 break;
             }
+            
             Console.WriteLine("Invalid input. Please enter a valid price.");
-        }
 
-        int quantity;
+            
+        }
+   
+
+           
+            int quantity;
         while (true)
         {
             Console.WriteLine("Enter product quantity:");
             string inputQuantity = Console.ReadLine();
-            if (int.TryParse(inputQuantity, out quantity))
+            if (int.TryParse(inputQuantity, out quantity) && quantity >= 0)
             {
                 break;
             }

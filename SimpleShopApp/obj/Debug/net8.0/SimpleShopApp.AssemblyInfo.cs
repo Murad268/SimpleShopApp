@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SimpleShopApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f99b978d619284b9119b507b008678a7ffdd872e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99df98ebdf43ea1abc0d419b38a00cbea9ade4e8")]
 [assembly: System.Reflection.AssemblyProductAttribute("SimpleShopApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SimpleShopApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
