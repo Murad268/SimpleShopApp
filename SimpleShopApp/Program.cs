@@ -154,6 +154,17 @@ class Program
         }
         else if (selectedVariant == 6)
         {
+            foreach (Hashtable product in products)
+            {
+                count++;
+                Console.WriteLine($"id: {(int)product["id"]}");
+                Console.WriteLine($"name: {(string)product["name"]}");
+                Console.WriteLine($"model: {(string)product["model"]}");
+                Console.WriteLine($"price: {(double)product["price"]}");
+                Console.WriteLine($"quantity: {(int)product["quantity"]}");
+                Console.WriteLine($"category: {getCategory((int)product["product_category_id"])}");
+                Console.WriteLine("==================");
+            }
             sellProduct();
         }
 
@@ -313,26 +324,43 @@ class Program
             if ((int)product["id"] == idToSell)
             {
                 int currentQuantity = (int)product["quantity"];
-                if (currentQuantity > 0)
-                {
-                    Console.WriteLine($"Selling product: {(string)product["name"]}");
-                    currentQuantity--;
-                    product["quantity"] = currentQuantity;
-                    Console.WriteLine($"New quantity: {currentQuantity}");
+                Console.WriteLine($"Selling product: {(string)product["name"]}");
 
-                    if (currentQuantity == 0)
+                int quantityToSell;
+                while (true)
+                {
+                    Console.WriteLine("Enter quantity to sell:");
+                    string inputQuantity = Console.ReadLine();
+                    if (int.TryParse(inputQuantity, out quantityToSell) && quantityToSell > 0)
                     {
-                        products.Remove(product);
-                        Console.WriteLine("Product sold out and removed from inventory.");
+                        if (quantityToSell <= currentQuantity)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Quantity to sell cannot be more than available quantity.");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid input. Please enter a valid quantity.");
                     }
                 }
-                else
+
+                currentQuantity -= quantityToSell;
+                product["quantity"] = currentQuantity;
+                Console.WriteLine($"New quantity: {currentQuantity}");
+
+                if (currentQuantity == 0)
                 {
-                    Console.WriteLine("Product is already sold out.");
+                    products.Remove(product);
+                    Console.WriteLine("Product sold out and removed from inventory.");
                 }
                 return;
             }
         }
         Console.WriteLine("Product not found.");
     }
+
 }

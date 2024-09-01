@@ -12,3 +12,4 @@ C:\Users\TechEvo Computers\Desktop\SimpleShopApp\SimpleShopApp\obj\Debug\net8.0\
 C:\Users\TechEvo Computers\Desktop\SimpleShopApp\SimpleShopApp\obj\Debug\net8.0\SimpleShopApp.pdb
 C:\Users\TechEvo Computers\Desktop\SimpleShopApp\SimpleShopApp\obj\Debug\net8.0\SimpleShopApp.genruntimeconfig.cache
 C:\Users\TechEvo Computers\Desktop\SimpleShopApp\SimpleShopApp\obj\Debug\net8.0\ref\SimpleShopApp.dll
+C:\Users\TechEvo Computers\Desktop\SimpleShopApp\SimpleShopApp\obj\Debug\net8.0\SimpleShopApp.sourcelink.json
